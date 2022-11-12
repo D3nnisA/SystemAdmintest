@@ -1,0 +1,33 @@
+#!/bin/bash
+
+read "textFileinput"
+read "lastName"
+
+if [[ "$textFileinput" && "$lastName" != " " ]]; then
+
+touch /home/darnold/test2/"$textFileinput"
+
+echo "dennis Arnold" >> /home/darnold/test2/"$textFileinput"
+echo "Santo Miguel" >> /home/darnold/test2/"$textFileinput"
+echo "Kim Noralez" >> /home/darnold/test2/"$textFileinput"
+echo "lisa Arnold" >> /home/darnold/test2/"$textFileinput"
+echo "Dom Miguel" >> /home/darnold/test2/"$textFileinput"
+
+else
+
+echo "You need to provide two inputs for this to work!!"
+
+fi
+
+while [[ "textFileinput" && "$lastName" != " " ]]
+
+do
+
+echo " "
+grep "$lastName" /home/darnold/test2/"$textFileinput"
+echo " "
+echo "Goodbye!"
+
+
+break
+done
